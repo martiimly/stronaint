@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="MM" />
+  <meta name="Keywords" content="WWW;Realizacja 1" />
+  <meta name="Description" content="Firma MD Wykończenia Wnętrz" />
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <title>MD Wykończenia Wnętrz</title>
+  <link rel="stylesheet" href="Style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div class="header">
+  <img src="logo.jpg" width="800" heigth="0">
+</div>
+
+<div class="navbar">
+  <a href="index.html">Strona Główna</a>
+  <a href="Usługi.html">Usługi</a>
+  <a href="Realizacje.html">Realizacje</a>
+  <a href="Kontakt.html">Kontakt</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>O Firmie</h2>
+    <img src="Przechwytywanie.jpg" width="200" heigth="0">
+    <p>MD jest firmą wykonującą wszelkiego rodzaju prace remontowo-wykończeniowe mieszkań domów biur hal magazynów na terenie całego Krakowa i okolic. Na mojej stronie znajdziecie Państwo kompleksowy zakres wykonywanych usług. </p>
+    <h3>Gdzie mnie znaleźć?</h3>
+    <p>Odwiedź mnie w social media:</p>
+    <div> <a href="https://www.facebook.com/MDWykonczeniaWnetrz" class="fb btn"><i class="fa fa-facebook fa-fw" style="height:60px;" ></i>Facebook
+    </a><br></div>
+    <div> <a href="#" class="instagram btn"><i class="fa fa-instagram fa-fw" style="height:60px;"></i> Instagram
+    </a><br></div>
+    <div>  <a href="#" class="linkedin btn"><i class="fa fa-linkedin fa-fw" style="height:60px;"></i> Linkedin
+    </a><br></div>
+  </div>
+  <div class="main">
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="r7/1.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="r7/2.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="r7/4.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="r7/5.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="r7/6.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="r7/9.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="r7">
+        <div class="column">
+          <img class="demo cursor" src="r7/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Realizacja 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="r7/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Realizacja 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="r7/4.jpg" style="width:100%" onclick="currentSlide(3)" alt="Realizacja 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="r7/5.jpg" style="width:100%" onclick="currentSlide(4)" alt="Realizacja 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="r7/6.jpg" style="width:100%" onclick="currentSlide(5)" alt="Realizacja 1">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="r7/9.jpg" style="width:100%" onclick="currentSlide(6)" alt="Realizacja 1">
+        </div>
+      </div>
+    </div>
+
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  </div>
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+
+</body>
+</html>
